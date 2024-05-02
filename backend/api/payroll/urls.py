@@ -1,6 +1,4 @@
-from django.db import router
-from django.urls import path
-from django.conf.urls import url, include
+from django.urls import path, include
 from rest_framework import routers
 from .views import UserViewSet
 
@@ -11,6 +9,5 @@ router.register(r'users', UserViewSet)
 
 urlpatterns = [
     path('', views.index, name='index'),
-    url(r'^', include(router.urls)),
-
+    path('', include(router.urls)),
 ]
