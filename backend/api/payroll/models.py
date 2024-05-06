@@ -9,9 +9,6 @@ from django.utils.translation import gettext_lazy as _
 
 
 
-
-# Create your models here.
-
 #Users Model
 class User(AbstractUser):
     username = models.CharField(max_length=255, blank=True, null=True)
